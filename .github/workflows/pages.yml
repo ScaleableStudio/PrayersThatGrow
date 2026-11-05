@@ -34,7 +34,8 @@ jobs:
         with:
           node-version: 22
       - name: Stop unless the site is marked live
-        run: node -e "const c=require('./site.config.json'); if(!c.deploy.live){console.error('deploy.live is false in site.config.json: not publishing.'); process.exit(1)}"
+        run: |
+          node -e "const c=require('./site.config.json'); if(!c.deploy.live){console.error('deploy.live is false in site.config.json, so not publishing.'); process.exit(1)}"
       - name: Test the order maths
         run: node tools/pricing.test.js
       - name: Build

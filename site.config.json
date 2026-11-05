@@ -45,11 +45,12 @@
     "_note": "false = buttons say orders open soon and the cart is not built into the site. The cart draft lives in src/drafts/."
   },
   "deploy": {
-    "domain": "prayersthatgrow.com",
-    "wwwRedirect": true,
-    "host": "GitHub Pages (planned; see docs/domain-connection.md)",
-    "live": false,
-    "_note": "live stays false until Ken says go. The build writes site/CNAME from 'domain'; the Pages workflow runs only when started by hand."
+    "domain": "bus1idea.scalablestudio.online",
+    "futureDomain": "prayersthatgrow.com",
+    "wwwRedirect": false,
+    "host": "GitHub Pages from this public repo (Ken, 2026-11-05)",
+    "live": true,
+    "_note": "Ken said go on 2026-11-05: the site goes live on the subdomain bus1idea.scalablestudio.online. When prayersthatgrow.com is bought, put it in domain (see docs/domain-connection.md). The build writes site/CNAME from domain. Set live to false to stop publishing."
   },
   "project": {
     "source": "../../bus1idea",

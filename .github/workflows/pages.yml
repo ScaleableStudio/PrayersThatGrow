@@ -1,10 +1,19 @@
 # Publishes site/ (Home, About, Contact) to GitHub Pages at the domain in site.config.json.
-# Started by hand only (Actions tab > "Publish website" > Run workflow): pushing never deploys.
-# It also stops unless site.config.json has "deploy": { "live": true }, which stays false until Ken says go.
+# Runs on every push to main that touches the website, or by hand from the Actions tab (Ken said go, 2026-11-05).
+# It stops unless site.config.json has "deploy": { "live": true }; set it to false to stop publishing.
 # The cart in _drafts/ is never published by this workflow: only site/ is uploaded.
 name: Publish website
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'site.config.json'
+      - 'src/**'
+      - 'assets/**'
+      - 'tools/build.js'
+      - 'tools/pricing.test.js'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:

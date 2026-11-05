@@ -5,20 +5,21 @@
 Each set is a prayer card read aloud each time the pot is watered, a seed-paper swatch to plant, and a thank-you
 card with the four planting steps, burned by hand on a laser in Texas.
 
-This private repository belongs to the Scalable Studio organisation.
+This public repository belongs to the Scalable Studio organisation.
 - **`project/`** holds the whole working project: blueprint, roadmap, research, Ann's v3, laser files, vision
   boards and 32K renders.
 - It is mirrored from Scriptorium (`Projects\bus1idea`), which stays the working copy. Refresh it with
   `node tools/sync-project.js`.
 
-## Domain (ready to connect, not live)
+## Live site
 
-- `prayersthatgrow.com` is set in `site.config.json`, and the build writes `site/CNAME`.
-- `.github/workflows/pages.yml` ("Publish website") runs by hand only, and stops while `deploy.live` is `false`.
+- **https://bus1idea.scalablestudio.online** (Ken, 2026-11-05), published by GitHub Pages from this repo.
+- `.github/workflows/pages.yml` ("Publish website") runs on every push to `main` that touches the website, and stops if `deploy.live` is `false`.
+- prayersthatgrow.com is the planned domain; it is not bought yet.
 - The DNS records are in `deploy/dns-github-pages.json`.
 - Every step after the domain is bought, and the hosting choice to make first: `docs/domain-connection.md`.
 
-## Website (built 2026-11-04, not deployed)
+## Website (built 2026-11-04; Home, About, Contact live 2026-11-05; cart not deployed)
 
 | Path | What it is |
 |---|---|
@@ -41,7 +42,7 @@ node tools/build.js
 
 Not yet set (the pages say so plainly): the contact email and phone, a form service for the contact forms,
 claimed social accounts (handles are listed but not linked until claimed), and the Shopify store.
-The domain is not bought yet, and nothing is deployed.
+prayersthatgrow.com is not bought yet. The cart is not deployed.
 
 - Store: Shopify on prayersthatgrow.com
 - Social: @prayersthatgrow (YouTube, TikTok, Pinterest, X) · @4prayersthatgrow (Instagram, Threads)

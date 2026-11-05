@@ -1,6 +1,22 @@
 # Connecting prayersthatgrow.com
 
-Prepared 2026-11-04, ready for when the domain is bought. Nothing here has been switched on.
+## Now: bus1idea.scalablestudio.online (Ken, 2026-11-05)
+
+Ken chose to go live on a subdomain of the domain Scalable Studio already owns, and to make this repository
+public (the hosting choice below is settled that way: Pages publishes straight from this repo, free).
+- `site.config.json` → `deploy.domain` is `bus1idea.scalablestudio.online`, `deploy.live` is `true`.
+- "Publish website" runs on every push to `main` that touches the website.
+- DNS at Hostinger (scalablestudio.online zone): `bus1idea` CNAME `scaleablestudio.github.io.`. Body file:
+  `Scriptorium\Workshop\Hostinger\changes\2026-11-05-bus1idea-dns.json`. Restore point before it: snapshot
+  194360425. The domain is already verified for the ScaleableStudio organisation, so no new TXT record is needed.
+- Ken asked for scalablestudio.com; the account owns only scalablestudio.ai and .online, so .online is used.
+
+When prayersthatgrow.com is bought, follow the steps below with that domain, then set `deploy.domain` to it
+(steps 2 and 3 are needed again: the new domain must be verified and pointed).
+
+---
+
+Prepared 2026-11-04, ready for when the domain is bought.
 
 **Already ready:**
 - `site.config.json` → `deploy.domain` is `prayersthatgrow.com`, and the build writes it to `site/CNAME`.

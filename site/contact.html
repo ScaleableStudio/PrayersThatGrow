@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact Prayers That Grow</title>
+<meta name="description" content="Request a church order or send Ken and Ann a message about Prayers That Grow plantable prayer cards.">
+<meta name="theme-color" content="#07090d">
+<link rel="icon" href="assets/art/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/art/logo.svg" alt="" width="40" height="40">Prayers That Grow</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="contact-title">
+    <div class="section-head">
+      <p class="label">Contact</p>
+      <h1 id="contact-title" style="font-size: var(--step-3); line-height: 1.04">Talk with Ken and Ann</h1>
+      <p>Ordering for a church, asking about a set, or telling us your seeds sprouted: we'd love to hear from you.</p>
+    </div>
+
+    <div class="contact">
+      <div class="panel" id="church">
+        <h2>Church order request</h2>
+        <p class="fine">Churches pay $7.50 a card plus $1.25 shipping a card. This request takes no payment: one of us calls to confirm it, then we send an invoice.</p>
+        <form id="church-form" data-form="church" data-endpoint="" data-ready="no" novalidate>
+          <div class="field"><label for="c-church">Church name</label><input id="c-church" name="church" autocomplete="organization" required></div>
+          <div class="field"><label for="c-address">Church address</label><textarea id="c-address" name="address" rows="3" autocomplete="street-address" required style="min-height: 0"></textarea></div>
+          <div class="row">
+            <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="c-phone">Phone number</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required><span class="hint">We call this number to confirm the order.</span></div>
+          </div>
+          <div class="field"><label for="c-email">Email <span class="hint">(optional)</span></label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+          <div class="row">
+            <div class="field"><label for="c-prayer">Prayer</label><select id="c-prayer" name="prayer" required><option value="lords-prayer">The Lord's Prayer · Matthew 6:9–13</option></select></div>
+            <div class="field"><label for="c-qty">Number of cards</label><input id="c-qty" name="quantity" type="number" min="1" step="1" inputmode="numeric" required></div>
+          </div>
+          <div class="field"><label for="c-notes">Anything else? <span class="hint">(optional)</span></label><textarea id="c-notes" name="notes" placeholder="For example: a date you need them by, or a mix of prayers."></textarea></div>
+          <div class="actions"><button class="btn primary" type="submit">Send church request</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Send a message</h2>
+        <form id="message-form" data-form="message" data-endpoint="" data-ready="no" novalidate>
+          <div class="field"><label for="m-name">Name</label><input id="m-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="m-email">Email</label><input id="m-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="m-message">Message</label><textarea id="m-message" name="message" required></textarea></div>
+          <div class="actions"><button class="btn" type="submit">Send message</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <div style="display: grid; gap: 10px">
+          <p class="label">Reach us</p>
+          <p class="notice">Our email address and phone number will be listed here when the shop opens.</p>
+          <p class="fine">Social accounts are on the way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/contact.js"></script>
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <p><strong>Prayers That Grow</strong> · <span class="mono">prayersthatgrow.com</span></p>
+      <p>Made by hand by Ken &amp; Ann in Texas · © 2026</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html#church">Church orders</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
+

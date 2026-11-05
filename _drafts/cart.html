@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your order · Prayers That Grow</title>
+<meta name="description" content="Choose your prayer cards. 10 or more cards of any prayers are $8.50 each; shipping is $1.25 a card.">
+<meta name="theme-color" content="#07090d">
+<link rel="icon" href="../site/assets/art/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../site/assets/css/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../site/index.html"><img src="../site/assets/art/logo.svg" alt="" width="40" height="40">Prayers That Grow</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../site/index.html">Home</a>
+      <a href="../site/about.html">About</a>
+      <a href="../site/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <p class="notice"><strong>Draft, not deployed.</strong> This cart is prepared for review only. It is built into <span class="mono">_drafts/</span>, not into the website, and no page links to it. Checkout will be Shopify's.</p>
+
+  <section aria-labelledby="cart-title">
+    <div class="section-head">
+      <p class="label">Your order</p>
+      <h1 id="cart-title" style="font-size: var(--step-3); line-height: 1.04">Choose your prayer cards</h1>
+      <p>Each card is a complete set. 10 or more cards in one order, of any prayers, brings every card to $8.50. Shipping is $1.25 a card.</p>
+    </div>
+
+    <div class="contact">
+      <div class="panel">
+        <h2>Prayers</h2>
+        <div id="cart-lines" class="cart-lines"></div>
+        <p class="fine">More prayers are being chosen. Ordering for a church? <a href="../site/contact.html#church">Send a church request</a>; churches pay $7.50 a card by invoice after a phone call.</p>
+      </div>
+
+      <div class="panel" aria-live="polite">
+        <h2>Summary</h2>
+        <dl class="details num" id="cart-summary"></dl>
+        <p class="notice" id="cart-nudge" hidden></p>
+        <div class="actions"><button class="btn primary" type="button" id="checkout" disabled>Checkout opens with the shop</button></div>
+        <p class="fine">Payment, tax and delivery are handled by Shopify's checkout.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script type="application/json" id="ptg-data">{"pricing":{"currency":"USD","baseCents":1000,"bulkCents":850,"bulkMinQty":10,"bulkCountsWholeOrder":true,"churchCents":750,"shippingPerCardCents":125},"prayers":[{"id":"lords-prayer","title":"The Lord's Prayer","reference":"Matthew 6:9–13"}]}</script>
+<script src="../site/assets/js/pricing.js"></script>
+<script src="../site/assets/js/cart.js"></script>
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <p><strong>Prayers That Grow</strong> · <span class="mono">prayersthatgrow.com</span></p>
+      <p>Made by hand by Ken &amp; Ann in Texas · © 2026</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../site/index.html">Home</a>
+      <a href="../site/about.html">About</a>
+      <a href="../site/contact.html">Contact</a>
+      <a href="../site/contact.html#church">Church orders</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
+

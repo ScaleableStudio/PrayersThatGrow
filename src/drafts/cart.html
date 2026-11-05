@@ -1,0 +1,36 @@
+<!--meta {"title": "Your order · Prayers That Grow", "description": "Choose your prayer cards. 10 or more cards of any prayers are $8.50 each; shipping is $1.25 a card.", "nav": "cart"}-->
+{{> head}}
+{{> header}}
+<main class="wrap">
+
+  <p class="notice"><strong>Draft, not deployed.</strong> This cart is prepared for review only. It is built into <span class="mono">_drafts/</span>, not into the website, and no page links to it. Checkout will be Shopify's.</p>
+
+  <section aria-labelledby="cart-title">
+    <div class="section-head">
+      <p class="label">Your order</p>
+      <h1 id="cart-title" style="font-size: var(--step-3); line-height: 1.04">Choose your prayer cards</h1>
+      <p>Each card is a complete set. 10 or more cards in one order, of any prayers, brings every card to {{price.bulk}}. Shipping is {{price.shipping}} a card.</p>
+    </div>
+
+    <div class="contact">
+      <div class="panel">
+        <h2>Prayers</h2>
+        <div id="cart-lines" class="cart-lines"></div>
+        <p class="fine">More prayers are being chosen. Ordering for a church? <a href="{{base}}contact.html#church">Send a church request</a>; churches pay {{price.church}} a card by invoice after a phone call.</p>
+      </div>
+
+      <div class="panel" aria-live="polite">
+        <h2>Summary</h2>
+        <dl class="details num" id="cart-summary"></dl>
+        <p class="notice" id="cart-nudge" hidden></p>
+        <div class="actions"><button class="btn primary" type="button" id="checkout" disabled>Checkout opens with the shop</button></div>
+        <p class="fine">Payment, tax and delivery are handled by Shopify's checkout.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+{{html.cartData}}
+<script src="{{base}}assets/js/pricing.js"></script>
+<script src="{{base}}assets/js/cart.js"></script>
+{{> footer}}

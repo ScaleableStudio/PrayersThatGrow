@@ -1,0 +1,136 @@
+<!--meta {"title": "Prayers That Grow", "description": "Plantable prayer cards made by hand in Texas: plant the seed card, water it every day, and read the prayer aloud each time you water.", "nav": "home"}-->
+{{> head}}
+{{> header}}
+<main class="wrap">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="label">Plantable prayer cards · made by hand in {{brand.madeIn}}</p>
+      <h1 id="hero-title">Prayers that <em>grow.</em></h1>
+      <p class="tagline">{{brand.tagline}}</p>
+      <p class="lede">Plant the seed card in a pot of soil. Water it every day, and read the prayer aloud each time you do. As the plant grows, the habit of prayer grows with it.</p>
+      <div class="actions">
+        {{html.orderButton}}
+        <a class="btn" href="contact.html#church">Ordering for a church?</a>
+      </div>
+    </div>
+    <figure class="stage">
+      <svg viewBox="0 0 370 218" role="img" aria-label="One set, drawn to scale from the laser files: a kraft envelope, the thank-you card, the Lord's Prayer card, the planting steps on the back of the thank-you card, and the seed paper swatch">
+        <rect x="6" y="34" width="92.075" height="165.1" rx="1" fill="#b98b5c"/>
+        <polygon points="6,34 52.04,4 98.08,34" fill="#a97d50"/>
+        <polyline points="6,199.1 52.04,128 98.08,199.1" fill="none" stroke="#9c7247" stroke-width="0.5"/>
+        <image href="{{base}}assets/art/thank-you-front.svg" x="110" y="30" width="82.55" height="127"/>
+        <image href="{{base}}assets/art/prayer-card.svg" x="204" y="18" width="47.625" height="152.4"/>
+        <image href="{{base}}assets/art/thank-you-back.svg" x="264" y="30" width="82.55" height="127"/>
+        <image href="{{base}}assets/art/seed-swatch.svg" x="267.2" y="176" width="76.2" height="25.4"/>
+        <g font-family="IBM Plex Mono, Consolas, monospace" font-size="3.6" fill="#a3acba" text-anchor="middle">
+          <text x="52" y="210">kraft envelope</text>
+          <text x="151.3" y="166">thank-you card</text>
+          <text x="227.8" y="179">prayer card</text>
+          <text x="305.3" y="211">seed swatch</text>
+        </g>
+      </svg>
+      <figcaption>One set, to scale, drawn from the laser files. Every mark is burned in by the laser; nothing is printed.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="how-title">
+    <div class="section-head">
+      <p class="label">How it works</p>
+      <h2 id="how-title">Four steps, on the back of the thank-you card</h2>
+      <p>The pictures travel with the set, so anyone can follow them. You bring a pot and some soil.</p>
+    </div>
+    <div class="steps">
+      <figure class="card-art">
+        <img src="{{base}}assets/art/thank-you-back.svg" alt="The back of the thank-you card: four pictures, add soil, plant seed swatch, water and pray daily, keep going" width="330" height="508">
+        <figcaption>Back of the thank-you card · 3 1/4 × 5 in</figcaption>
+      </figure>
+      <ol class="step-list">
+        <li><h3>Add soil</h3><p>Fill a pot with soil. A sunny windowsill suits it best, indoors in winter.</p></li>
+        <li><h3>Plant the seed swatch</h3><p>Lay the seed paper on the soil and cover it with a thin layer of soil, as the paper's maker advises.</p></li>
+        <li><h3>Water and pray daily</h3><p>Each time you water the pot, read the prayer card aloud. Keep the soil moist, not soaked.</p></li>
+        <li><h3>Keep going</h3><p>Sprouts come first, then flowers. Keep praying while it grows.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="prayer" aria-labelledby="prayer-title">
+    <figure class="card-art">
+      <img src="{{base}}assets/art/prayer-card.svg" alt="The Lord's Prayer card, burned into cardstock" width="230" height="736">
+      <figcaption>Prayer card · 1 7/8 × 6 in</figcaption>
+    </figure>
+    <div class="section-head">
+      <p class="label">The first prayer</p>
+      <h2 id="prayer-title">{{prayer.title}}</h2>
+      <blockquote>{{prayer.text}}<cite>{{prayer.reference}}</cite></blockquote>
+      <div class="more" aria-label="1 of {{prayersPlanned}} prayers ready">
+        <span class="slot filled"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span><span class="slot"></span>
+        <span class="fine">The first of {{prayersPlanned}} prayers. The others are being chosen now.</span>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="set-title">
+    <div class="section-head">
+      <p class="label">In every envelope</p>
+      <h2 id="set-title">Three pieces, one kraft envelope</h2>
+      <p>Nothing is longer than the prayer card, so it all fits a #6 3/4 envelope. No pot or soil inside: use your own.</p>
+    </div>
+    <div class="pieces">
+      <article class="piece"><span class="size">1 7/8 × 6 in · cardstock</span><h3>The prayer card</h3><p>The prayer to read aloud each time you water, laser-etched and cut by hand.</p></article>
+      <article class="piece"><span class="size">about 1 × 3 in · seed paper</span><h3>The seed swatch</h3><p>Wildflower seed paper, engraved with the verse reference. This is the piece you plant.</p></article>
+      <article class="piece"><span class="size">3 1/4 × 5 in · cardstock</span><h3>The thank-you card</h3><p>A note from Ken and Ann on the front, and the four planting steps on the back.</p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="price-title">
+    <div class="section-head">
+      <p class="label">Prices</p>
+      <h2 id="price-title">Each card is a complete set</h2>
+      <p>Mix prayers as you like: 10 or more cards in one order, of any prayers, brings every card to {{price.bulk}}. Shipping is {{price.shipping}} a card.</p>
+    </div>
+    <div class="prices-wrap">
+      <table class="prices">
+        <thead><tr><th scope="col">Order</th><th scope="col">Per card</th><th scope="col">Shipping</th><th scope="col">Per card, shipped</th></tr></thead>
+        <tbody>
+          <tr><td>1 to {{price.bulkBelow}} cards</td><td>{{price.base}}</td><td>{{price.shipping}}</td><td class="total">{{price.baseTotal}}</td></tr>
+          <tr><td>{{price.bulkMin}} or more cards<small>any mix of prayers</small></td><td>{{price.bulk}}</td><td>{{price.shipping}}</td><td class="total">{{price.bulkTotal}}</td></tr>
+          <tr><td>Churches<small>we call to confirm, then send an invoice</small></td><td>{{price.church}}</td><td>{{price.shipping}}</td><td class="total">{{price.churchTotal}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="church" id="churches" aria-labelledby="church-title">
+    <div class="section-head">
+      <p class="label">For churches</p>
+      <h2 id="church-title">A gift for your whole congregation</h2>
+      <p>Churches pay {{price.church}} a card. Send us a request with no payment; one of us calls to confirm it, and then we send an invoice.</p>
+      <ul class="uses" aria-label="Ways churches use them"><li>members</li><li>Sunday school</li><li>shut-ins</li><li>Christmas Eve services</li><li>stocking stuffers</li></ul>
+    </div>
+    <div class="section-head">
+      <ol>
+        <li>Send the church order request on our contact page.</li>
+        <li>Ken or Ann calls the number you give us.</li>
+        <li>We send an invoice at {{price.church}} a card, plus {{price.shipping}} shipping a card.</li>
+        <li>Your cards are made and posted.</li>
+      </ol>
+      <div class="actions"><a class="btn primary" href="contact.html#church">Request a church order</a></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="plain-title">
+    <div class="section-head">
+      <p class="label">Good to know</p>
+      <h2 id="plain-title">What to expect when you plant</h2>
+    </div>
+    <div class="notes">
+      <div><h3>Sprouting takes time</h3><p>Wildflower seed paper usually sprouts within a few weeks, and flowers come later. Light, warmth and water all play a part, so we can't promise a date.</p></div>
+      <div><h3>The flowers vary</h3><p>The wildflower mix in seed paper changes from batch to batch, so we don't promise one particular flower.</p></div>
+      <div><h3>If nothing sprouts</h3><p>Let us know and we'll send a new seed swatch. The prayer never depended on the seed.</p></div>
+      <div><h3>An invitation, not a promise</h3><p>Each set invites you into a daily habit of prayer. What grows from it is between you and God.</p></div>
+    </div>
+  </section>
+
+</main>
+{{> footer}}

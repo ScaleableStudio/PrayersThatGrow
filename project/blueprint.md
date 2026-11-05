@@ -315,7 +315,7 @@ Texas, and what to expect when you plant (section 5).
 
 | Item | Options | Status |
 |---|---|---|
-| Final name and domain | Prayers That Grow, prayersthatgrow.com | Known (Ken, 2026-11-04) |
+| Final name and domain | Prayers That Grow, prayersthatgrow.com (not yet bought) | Known (Ken 2026-11-04; Ann 2026-11-05) |
 | Is the domain registered, and where? | Not yet. Available 2026-11-04 (.com, .org, .net) via Hostinger check | Open: Ken and Ann to buy |
 | Platform | **Shopify** on a custom domain | Known (Ken, 2026-11-04) |
 | Pre-launch checks | Ann's v3 acceptance tests: mixed-cart 10+ price; 9 cards stay $10; church order held unpaid, verified by phone, invoiced at $7.50; $1.25 shipping per card; confirmations; order tracking without re-entry | Known (adopted) |
@@ -477,6 +477,9 @@ The other 5 prayers can join the site as they're finished; the Lord's Prayer set
 | 2026-11-04 | Name and domain: **Prayers That Grow, prayersthatgrow.com**, replacing sowingfaithseeds.com (after a 37-name search, `research/name-search-2026-11-04.md`). Socials checked: `research/socials-prayersthatgrow-2026-11-04.md`. | Ken |
 | 2026-11-04 | Fallback social handle: **@4prayersthatgrow** (where @prayersthatgrow is taken, i.e. Instagram and Threads). | Ken |
 | 2026-11-04 | Private GitHub repository **ScaleableStudio/PrayersThatGrow** created (README only); clone at `Projects\ScaleableStudio\PrayersThatGrow\`. Project files stay here until Ken says to move them. | Ken asked; Thunder created |
+| 2026-11-04 | Whole project uploaded to the PrayersThatGrow repo (`project/`, mirrored by `tools/sync-project.js`; this folder stays the working copy). Domain connection prepared, not live: `site/CNAME`, a hand-started Pages workflow that refuses while `deploy.live` is false, DNS records, steps in `docs/domain-connection.md`. Open: where the public site lives (public site repo / paid GitHub plan / Shopify). | Ken asked; Thunder prepared |
 | 2026-11-04 | **Website build started** (Ken lifted "no website code" for the site): Home, About, Contact built from the vision board and this blueprint in the PrayersThatGrow repo (`site/`); cart prepared in `_drafts/` but **not deployed** (Ken). Nothing is hosted; the domain is not bought. | Ken asked; Thunder built |
 | 2026-11-04 | Vision board for Prayers That Grow (`vision/vBoard-ptg.html`) with a new 32K poster; older boards kept unchanged. | Ken asked; Thunder built |
 | 2026-11-04 | Rest of v3 adopted: vendor file (reference only), engraved-swatch sprouting check, full costing, pilot = first 10 of the 100 samples, mail-piece check, church sample log, new risks. | Ken |
+| 2026-11-05 | Website **live at https://bus1idea.scalablestudio.online** (Home, About, Contact; cart still not deployed). The PrayersThatGrow repo is now **public** and GitHub Pages publishes from it; DNS CNAME `bus1idea` added at Hostinger. Hosting question settled this way for now. | Ken asked and approved; Thunder did it |
+| 2026-11-05 | Name **Prayers That Grow / prayersthatgrow.com approved by Ann as well**: settled. Buying the domain is next (owner tier: Ken and Ann). | Ken and Ann |

@@ -1,0 +1,75 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="seed-logo" role="img" aria-label="A seed in the soil splitting open, a root reaching down and a sprout rising with two leaves">
+  <!-- Placeholder logo for bus1idea (Sowing Faith Seeds), drawn by Thunder 2026-11-04. Original artwork. -->
+  <defs>
+    <radialGradient id="sl-halo" cx="50%" cy="46%" r="50%">
+      <stop offset="0" stop-color="#ff8a3d" stop-opacity="0.42"/>
+      <stop offset="0.45" stop-color="#ff8a3d" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sl-soil" cx="50%" cy="0%" r="80%">
+      <stop offset="0" stop-color="#2a1c12" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#07090d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sl-seed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c98f58"/>
+      <stop offset="1" stop-color="#6b4022"/>
+    </linearGradient>
+    <linearGradient id="sl-stem" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#4f9a5e"/>
+      <stop offset="1" stop-color="#a6f0b2"/>
+    </linearGradient>
+    <linearGradient id="sl-leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8f5c2"/>
+      <stop offset="1" stop-color="#4f9a5e"/>
+    </linearGradient>
+    <filter id="sl-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sl-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="#07090d"/><circle class="sl-halo" cx="300" cy="300" r="290" fill="url(#sl-halo)"/>
+
+  <!-- soil -->
+  <path d="M0 416 Q300 384 600 416 L600 600 L0 600 Z" fill="url(#sl-soil)"/>
+  <path d="M60 410 Q300 384 540 410" fill="none" stroke="#ff8a3d" stroke-opacity="0.55" stroke-width="1.6" filter="url(#sl-glow)"/>
+
+  <!-- roots -->
+  <g fill="none" stroke="#e9b27a" stroke-linecap="round" stroke-opacity="0.85" filter="url(#sl-glow)">
+    <path d="M300 438 C296 470 312 498 300 540 C294 560 300 572 298 586" stroke-width="3.2"/>
+    <path d="M301 470 C320 480 334 494 346 520" stroke-width="1.8"/>
+    <path d="M300 500 C282 510 270 526 262 548" stroke-width="1.6"/>
+    <path d="M304 528 C316 536 322 548 326 562" stroke-width="1.2"/>
+  </g>
+
+  <!-- seed, split open, the crack glowing like a laser line -->
+  <g transform="rotate(-14 300 414)">
+    <ellipse cx="300" cy="414" rx="48" ry="29" fill="url(#sl-seed)"/>
+    <ellipse cx="292" cy="404" rx="22" ry="8" fill="#f3d0a6" fill-opacity="0.35" filter="url(#sl-soft)"/>
+    <path d="M254 414 Q300 404 346 414" fill="none" stroke="#ffb070" stroke-width="2.6" stroke-linecap="round" filter="url(#sl-glow)"/>
+  </g>
+
+  <!-- stem -->
+  <path class="sl-stem" d="M300 400 C292 350 318 300 304 236" fill="none" stroke="url(#sl-stem)" stroke-width="6" stroke-linecap="round" filter="url(#sl-glow)"/>
+
+  <!-- leaves: two seed leaves and a new bud -->
+  <g class="sl-leaves" filter="url(#sl-glow)">
+    <path d="M304 236 C280 198 244 190 214 202 C238 232 274 244 304 236 Z" fill="url(#sl-leaf)"/>
+    <path d="M304 236 C326 192 366 178 398 186 C380 222 340 244 304 236 Z" fill="url(#sl-leaf)"/>
+    <path d="M304 236 C298 214 304 196 316 184 C320 202 314 222 304 236 Z" fill="#d6ffdc"/>
+    <path d="M304 236 C276 216 248 206 226 204" fill="none" stroke="#2f6b3b" stroke-opacity="0.6" stroke-width="1.4"/>
+    <path d="M304 236 C332 210 362 194 390 188" fill="none" stroke="#2f6b3b" stroke-opacity="0.6" stroke-width="1.4"/>
+  </g>
+
+  <!-- sparks of light rising -->
+  <g fill="#ffd28a" filter="url(#sl-glow)">
+    <circle class="sl-spark" cx="258" cy="168" r="2.4"/>
+    <circle class="sl-spark" cx="352" cy="142" r="1.8"/>
+    <circle class="sl-spark" cx="300" cy="118" r="2.8"/>
+    <circle class="sl-spark" cx="226" cy="132" r="1.4"/>
+    <circle class="sl-spark" cx="388" cy="110" r="1.6"/>
+  </g>
+</svg>

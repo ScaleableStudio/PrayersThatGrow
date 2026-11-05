@@ -1,0 +1,73 @@
+{
+  "fontRoot": "W:\\blueprints\\Fonts-organized",
+  "font": "library\\Fipty Serif\\ttf\\FiptySerif-Regular.ttf",
+  "pngPixelsPerMm": 10,
+  "inkscapeFrom": "../../Workshop/Bezalel/tools/tools.json",
+  "renderer": "../../Workshop/Bezalel/tools/resvg/resvg.exe",
+  "outputDir": "designs/laser-test",
+  "travel": { "width": 200, "height": 150 },
+  "cutStroke": { "color": "#ff0000", "width": 0.1 },
+  "lineWidth": 0.6,
+  "border": {
+    "color": "#0000ff",
+    "width": 0.6,
+    "cornerRadius": 1.0,
+    "onThankYouBack": true,
+    "onSeedSwatch": true
+  },
+  "prayerCard": {
+    "widthIn": 1.875,
+    "heightIn": 6,
+    "margin": 3.5,
+    "titleCap": 2.6,
+    "refCap": 2.0,
+    "bodyMaxCap": 3.6,
+    "bodyMinCap": 1.2,
+    "lead": 1.75,
+    "crossSize": 4,
+    "gap": 3,
+    "layoutGap": 2.5,
+    "prayer": "lords-prayer"
+  },
+  "prayers": [
+    {
+      "id": "lords-prayer",
+      "title": "The Lord\u2019s Prayer",
+      "reference": "Matthew 6:9\u201313",
+      "text": "Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen."
+    }
+  ],
+  "thankYou": {
+    "widthIn": 3.25,
+    "heightIn": 5,
+    "margin": 7,
+    "heading": "Thank You",
+    "headingCap": 5,
+    "bodyMaxCap": 4.5,
+    "bodyMinCap": 1.5,
+    "lead": 1.8,
+    "text": "Thank you for supporting our mission to do God\u2019s work here and now on Earth. You have the unique opportunity to come to know God better and personally by prayer. We hope that this starts you on the path. Seek Him, and you will find Him. AhMen.",
+    "numberCap": 3,
+    "captionFont": "library\\Gores Sans\\ttf\\GoresSans.ttf",
+    "captionCap": 2.4,
+    "captionBottom": 3.5,
+    "captions": ["add soil", "plant seed swatch", "water & pray daily", "keep going"],
+    "pictureScale": 0.9,
+    "layoutGap": 5
+  },
+  "seedSwatch": {
+    "widthIn": 3,
+    "heightIn": 1,
+    "textCap": 3.5,
+    "margin": 4,
+    "columns": 2,
+    "rows": 3,
+    "layoutGap": 4
+  },
+  "sizeLadder": {
+    "caps": [1.4, 1.8, 2.2, 2.6, 3.0, 3.5, 4.0],
+    "labelCap": 1.6,
+    "labelWidth": 8,
+    "sample": "Give us this day, God"
+  }
+}

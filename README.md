@@ -5,8 +5,18 @@
 Each set is a prayer card read aloud each time the pot is watered, a seed-paper swatch to plant, and a thank-you
 card with the four planting steps, burned by hand on a laser in Texas.
 
-This private repository belongs to the Scalable Studio organisation. The working blueprint, laser files and
-vision boards are kept in Scriptorium (`Projects\bus1idea`).
+This private repository belongs to the Scalable Studio organisation.
+- **`project/`** holds the whole working project: blueprint, roadmap, research, Ann's v3, laser files, vision
+  boards and 32K renders.
+- It is mirrored from Scriptorium (`Projects\bus1idea`), which stays the working copy. Refresh it with
+  `node tools/sync-project.js`.
+
+## Domain (ready to connect, not live)
+
+- `prayersthatgrow.com` is set in `site.config.json`, and the build writes `site/CNAME`.
+- `.github/workflows/pages.yml` ("Publish website") runs by hand only, and stops while `deploy.live` is `false`.
+- The DNS records are in `deploy/dns-github-pages.json`.
+- Every step after the domain is bought, and the hosting choice to make first: `docs/domain-connection.md`.
 
 ## Website (built 2026-11-04, not deployed)
 
@@ -20,6 +30,7 @@ vision boards are kept in Scriptorium (`Projects\bus1idea`).
 | `tools/build.js` | Builds `site/` (the website) and `_drafts/` (the cart, outside the website) |
 | `tools/prepare-art.js` | Remakes `assets/art/` from the laser files in Scriptorium |
 | `tools/pricing.test.js` | Checks the order maths against the blueprint and Ann's checkout tests |
+| `tools/sync-project.js` | Mirrors Scriptorium's `Projects\bus1idea` into `project/` (refuses fonts and secret-like files) |
 | `site/` | The built website: open `site/index.html` in a browser to look at it |
 
 ```

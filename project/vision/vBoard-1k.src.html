@@ -1,0 +1,435 @@
+<title>Sowing Faith Vision Boards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a work table of pinned boards. The hero is the real set laid flat, to scale; boards follow in a two-column grid. */
+:root {
+  --ground: #e7eae1;      /* pale seed-paper sage */
+  --fleck: #c9cfbf;
+  --sheet: #f6f7f2;       /* board surface */
+  --table: #d9ddd1;       /* the flat-lay table */
+  --ink: #22281e;
+  --muted: #5b6553;
+  --line: #c7cdbd;
+  --sprout: #3d6a2c;      /* accent: new growth */
+  --sprout-soft: #dbe6cf;
+  --burn: #4a2d1b;        /* laser engraving on cardstock (artwork colour, same in both themes) */
+  --paper: #fbfbf8;       /* cardstock */
+  --kraft: #b98b5c;
+  --kraft-dark: #9c7247;
+  --seed: #efe9dc;
+  --display: "Young Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Karla", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --step--1: 0.84rem;
+  --step-0: 1.02rem;
+  --step-1: 1.25rem;
+  --step-2: 1.6rem;
+  --step-3: clamp(2.1rem, 5vw, 3.4rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #181c16; --fleck: #262b22; --sheet: #20251d; --table: #2a3025;
+    --ink: #e6e9df; --muted: #a2ac98; --line: #3a4234;
+    --sprout: #93c274; --sprout-soft: #2c3a24;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #181c16; --fleck: #262b22; --sheet: #20251d; --table: #2a3025;
+  --ink: #e6e9df; --muted: #a2ac98; --line: #3a4234;
+  --sprout: #93c274; --sprout-soft: #2c3a24;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background-color: var(--ground);
+  background-image: radial-gradient(var(--fleck) 0.8px, transparent 1.2px), radial-gradient(var(--fleck) 0.6px, transparent 1px);
+  background-size: 23px 29px, 37px 31px;
+  background-position: 0 0, 11px 17px;
+  color: var(--ink);
+  font: 400 var(--step-0)/1.6 var(--body);
+}
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 28px;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.label {
+  font: 500 0.72rem/1.3 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.mono { font-family: var(--mono); font-size: 0.86em; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* hero */
+.hero { display: grid; gap: 22px; }
+.hero-text { display: grid; gap: 14px; max-width: 62ch; }
+.hero h1 { font-size: var(--step-3); line-height: 1.05; letter-spacing: -0.01em; }
+.hero h1 em { font-style: normal; color: var(--sprout); }
+.hero .lede { font-size: var(--step-1); color: var(--muted); }
+.quote { font-family: var(--display); font-size: var(--step-1); line-height: 1.4; }
+.table {
+  background: var(--table);
+  border-radius: 6px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+.table svg { display: block; width: 100%; height: auto; }
+.table .note { font-size: var(--step--1); color: var(--muted); }
+
+/* boards */
+.boards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.board {
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+.board.wide { grid-column: 1 / -1; }
+.board header { display: grid; gap: 6px; }
+.board h2 { font-size: var(--step-2); line-height: 1.15; }
+.board .intro { color: var(--muted); max-width: 64ch; }
+@media (max-width: 760px) {
+  .boards { grid-template-columns: minmax(0, 1fr); }
+  .board { padding: 18px; }
+}
+
+/* journey */
+.journey { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+.journey li { display: grid; gap: 8px; align-content: start; padding: 0 14px 0 0; position: relative; }
+.journey .when { font: 500 0.78rem/1.3 var(--mono); color: var(--sprout); }
+.journey .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--sprout); position: relative; z-index: 1; }
+.journey li::before { content: ""; position: absolute; top: 6px; left: 0; right: 0; height: 2px; background: var(--line); }
+.journey li:last-child::before { right: 50%; }
+.journey .dot.open { background: var(--sheet); border: 2px solid var(--sprout); }
+.journey h3 { font-size: var(--step-1); line-height: 1.2; }
+.journey p { font-size: var(--step--1); color: var(--muted); }
+@media (max-width: 760px) {
+  .journey { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .journey li { padding: 0 0 0 26px; }
+  .journey li::before { top: 0; bottom: -18px; left: 6px; right: auto; width: 2px; height: auto; }
+  .journey li:last-child::before { bottom: 0; }
+  .journey .dot { position: absolute; left: 0; top: 2px; }
+}
+
+/* churches */
+.kits { display: grid; grid-template-columns: repeat(4, max-content); gap: 12px 16px; }
+.kit { display: grid; grid-template-columns: repeat(4, 10px); gap: 4px; }
+.kit span, .spare span { width: 10px; height: 10px; border-radius: 50%; background: var(--sprout); display: block; }
+.spare { display: grid; grid-template-columns: repeat(4, 10px); gap: 4px; align-content: start; }
+.spare span { background: transparent; border: 1.5px solid var(--sprout); }
+.figures { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.figures div { display: grid; gap: 2px; }
+.figures strong { font: 400 var(--step-2)/1 var(--display); }
+.figures span { font-size: var(--step--1); color: var(--muted); }
+.uses { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.uses li { font-size: var(--step--1); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+
+/* prayers */
+.six { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.slot { display: grid; gap: 8px; justify-items: center; text-align: center; }
+.slot .card { width: 100%; aspect-ratio: 47.625 / 152.4; max-width: 100%; border-radius: 3px; }
+.slot .card.filled { background: var(--paper); color: var(--burn); box-shadow: 0 1px 3px rgb(0 0 0 / 0.18); }
+.slot .card.filled svg { width: 100%; height: 100%; display: block; }
+.slot .card.empty { border: 1.5px dashed var(--line); display: grid; place-items: center; color: var(--muted); font: 400 var(--step-1) var(--display); }
+.slot small { font-size: 0.74rem; line-height: 1.3; color: var(--muted); }
+.slot small b { color: var(--ink); font-weight: 600; }
+
+/* look and feel */
+.materials { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.chip { display: grid; gap: 6px; }
+.chip i { display: block; aspect-ratio: 1; border-radius: 3px; border: 1px solid var(--line); }
+.chip b { font-size: var(--step--1); font-weight: 600; line-height: 1.25; }
+.chip span { font-size: 0.74rem; color: var(--muted); line-height: 1.3; }
+.seedpaper { background-color: var(--seed); background-image: radial-gradient(#d98aa0 1.2px, transparent 1.6px), radial-gradient(#e6c24a 1px, transparent 1.4px), radial-gradient(#7d9a5a 0.9px, transparent 1.3px); background-size: 13px 11px, 17px 19px, 9px 14px; background-position: 0 0, 5px 7px, 3px 2px; }
+.specimens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.specimen { background: var(--paper); color: var(--burn); border-radius: 3px; padding: 10px; display: grid; gap: 6px; box-shadow: 0 1px 3px rgb(0 0 0 / 0.14); }
+.specimen svg { width: 100%; height: auto; display: block; }
+.specimen .label { color: #6c6052; }
+@media (max-width: 520px) {
+  .materials { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .specimens { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* shop */
+.pages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.page { border: 1px solid var(--line); border-radius: 3px; padding: 12px; display: grid; gap: 6px; align-content: start; }
+.page h3 { font-size: var(--step-1); }
+.page p { font-size: var(--step--1); color: var(--muted); }
+.prices { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.prices th, .prices td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); font-size: var(--step--1); }
+.prices th { font: 500 0.72rem/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.prices td.big { font: 400 var(--step-1)/1 var(--display); color: var(--sprout); }
+@media (max-width: 520px) { .pages { grid-template-columns: minmax(0, 1fr); } }
+
+/* road to Christmas */
+.gantt { display: grid; gap: 8px; overflow-x: auto; }
+.gantt-inner { min-width: 560px; display: grid; gap: 8px; }
+.g-row { display: grid; grid-template-columns: 190px 1fr; gap: 12px; align-items: center; }
+.g-row .name { font-size: var(--step--1); line-height: 1.25; }
+.g-row .name span { display: block; color: var(--muted); font: 400 0.72rem/1.3 var(--mono); }
+.track { position: relative; height: 22px; background: linear-gradient(var(--line), var(--line)) 0 50% / 100% 1px no-repeat; }
+.bar { position: absolute; top: 4px; height: 14px; border-radius: 2px; background: var(--sprout); min-width: 6px; }
+.bar.milestone { width: 12px !important; min-width: 0; height: 12px; top: 5px; border-radius: 0; transform: translateX(-6px) rotate(45deg); }
+.axis { position: relative; height: 20px; }
+.axis span { position: absolute; transform: translateX(-50%); font: 400 0.7rem/1 var(--mono); color: var(--muted); white-space: nowrap; }
+.markers { position: absolute; inset: 0; pointer-events: none; }
+.marker { position: absolute; top: 0; bottom: 0; border-left: 1px dashed var(--muted); }
+.marker b { position: absolute; top: -2px; left: 4px; font: 500 0.68rem/1 var(--mono); color: var(--muted); white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; }
+.chart { position: relative; display: grid; gap: 8px; padding-top: 18px; }
+.legend { font-size: var(--step--1); color: var(--muted); }
+
+footer { color: var(--muted); font-size: var(--step--1); display: grid; gap: 4px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!--ART:prayer-card-->
+    <!--ART:thank-you-front-->
+    <!--ART:thank-you-back-->
+    <!--ART:seed-swatch-->
+    <pattern id="flecks" width="9" height="7" patternUnits="userSpaceOnUse">
+      <rect width="9" height="7" fill="#efe9dc"/>
+      <circle cx="1.5" cy="1.2" r="0.35" fill="#d98aa0"/>
+      <circle cx="6.2" cy="3.4" r="0.3" fill="#e6c24a"/>
+      <circle cx="3.6" cy="5.6" r="0.28" fill="#7d9a5a"/>
+      <circle cx="8.1" cy="6.2" r="0.22" fill="#c9a77d"/>
+    </pattern>
+    <filter id="lift" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0.6" dy="1.2" stdDeviation="1.1" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="label">bus1idea · Ken &amp; Ann · working name sowingfaithseeds.com</p>
+      <h1>Plant it. Water it. <em>Pray it.</em></h1>
+      <p class="lede">A daily prayer that grows. One envelope holds a prayer card, a seed swatch and a thank-you card. The recipient plants the swatch and reads the prayer aloud each time they water.</p>
+      <p class="quote">"As the plant sprouts and grows to bloom, they grow and bloom in Spirit."</p>
+    </div>
+
+    <figure class="table" style="margin:0">
+      <svg viewBox="0 0 370 218" role="img" aria-label="The set laid out to scale: kraft envelope, thank-you card front, prayer card, thank-you card back with four picture steps, and seed swatch">
+        <g font-family="IBM Plex Mono, Consolas, monospace" font-size="3.6" fill="currentColor" style="color:var(--muted)" text-anchor="middle">
+          <!-- envelope #6 3/4: 3 5/8 x 6 1/2 in = 92.075 x 165.1 mm -->
+          <g filter="url(#lift)">
+            <rect x="6" y="34" width="92.075" height="165.1" rx="1" fill="#b98b5c"/>
+            <polygon points="6,34 52.04,4 98.08,34" fill="#a97d50"/>
+            <polyline points="6,199.1 52.04,128 98.08,199.1" fill="none" stroke="#9c7247" stroke-width="0.5"/>
+          </g>
+          <text x="52" y="207">kraft envelope #6 3/4</text>
+          <text x="52" y="212.5">3 5/8 × 6 1/2 in</text>
+
+          <!-- thank-you front 82.55 x 127 -->
+          <g filter="url(#lift)"><rect x="110" y="30" width="82.55" height="127" fill="#fbfbf8"/></g>
+          <svg x="110" y="30" width="82.55" height="127" viewBox="0 0 82.55 127" style="color:#4a2d1b"><use href="#art-thank-you-front"/></svg>
+          <text x="151.3" y="164">thank-you card, front</text>
+          <text x="151.3" y="169.5">3 1/4 × 5 in</text>
+          <text x="151.3" y="186" style="font-style:italic">no pot, no soil inside:</text>
+          <text x="151.3" y="191.5" style="font-style:italic">the recipient brings those</text>
+
+          <!-- prayer card 47.625 x 152.4 -->
+          <g filter="url(#lift)"><rect x="204" y="18" width="47.625" height="152.4" fill="#fbfbf8"/></g>
+          <svg x="204" y="18" width="47.625" height="152.4" viewBox="0 0 47.625 152.4" style="color:#4a2d1b"><use href="#art-prayer-card"/></svg>
+          <text x="227.8" y="177.5">prayer card</text>
+          <text x="227.8" y="183">1 7/8 × 6 in</text>
+
+          <!-- thank-you back 82.55 x 127 -->
+          <g filter="url(#lift)"><rect x="264" y="30" width="82.55" height="127" fill="#fbfbf8"/></g>
+          <svg x="264" y="30" width="82.55" height="127" viewBox="0 0 82.55 127" style="color:#4a2d1b"><use href="#art-thank-you-back"/></svg>
+          <text x="305.3" y="164">thank-you card, back</text>
+          <text x="305.3" y="169.5">the four planting steps</text>
+
+          <!-- seed swatch 76.2 x 25.4 -->
+          <g filter="url(#lift)"><rect x="267.2" y="178" width="76.2" height="25.4" fill="url(#flecks)"/></g>
+          <svg x="267.2" y="178" width="76.2" height="25.4" viewBox="0 0 76.2 25.4" style="color:#4a2d1b"><use href="#art-seed-swatch"/></svg>
+          <text x="305.3" y="211">seed swatch · 1 × 3 in · wildflower</text>
+        </g>
+      </svg>
+      <figcaption class="note">Drawn to scale from the current laser test files (Lord's Prayer set). Engraving shown in burn brown on cardstock; the cut follows each card's rounded edge.</figcaption>
+    </figure>
+  </section>
+
+  <div class="boards">
+
+    <section class="board wide" aria-labelledby="b-journey">
+      <header>
+        <p class="label">Board · The recipient</p>
+        <h2 id="b-journey">From the envelope to the bloom</h2>
+        <p class="intro">The four pictures on the back of the thank-you card carry the whole idea. The prayer is the habit; the plant keeps time with it.</p>
+      </header>
+      <ol class="journey">
+        <li><i class="dot"></i><span class="when">Day 1</span><h3>Open the envelope</h3><p>"Thank You" faces up first, then the prayer card, with the seed swatch tucked behind it.</p></li>
+        <li><i class="dot"></i><span class="when">Day 1</span><h3>Add soil, plant the swatch</h3><p>Steps 1 and 2: "add soil", "plant seed swatch". A pot on a sunny winter windowsill.</p></li>
+        <li><i class="dot"></i><span class="when">Every day</span><h3>Water &amp; pray daily</h3><p>Step 3. Read the Lord's Prayer aloud each time the pot is watered, morning or evening.</p></li>
+        <li><i class="dot"></i><span class="when">1–3 weeks</span><h3>First sprouts</h3><p>Typical for wildflower seed. Bloom comes later and depends on light. Step 4: "keep going".</p></li>
+        <li><i class="dot open"></i><span class="when">After the bloom</span><h3>The next prayer</h3><p>An invitation to the next of the six prayers. If a seed fails, a free replacement swatch; the prayer never depended on it.</p></li>
+      </ol>
+    </section>
+
+    <section class="board" aria-labelledby="b-church">
+      <header>
+        <p class="label">Board · The launch gift</p>
+        <h2 id="b-church">100 free sets for a dozen churches</h2>
+        <p class="intro">The first 100 sets go out as samples before Thanksgiving week, so churches can order for Christmas.</p>
+      </header>
+      <div class="kits" id="kits" aria-label="12 church kits of 8 sets each, plus 4 spare sets"></div>
+      <div class="figures num">
+        <div><strong>12</strong><span>local churches</span></div>
+        <div><strong>8</strong><span>sets in each kit</span></div>
+        <div><strong>4</strong><span>spare (outlined)</span></div>
+      </div>
+      <ul class="uses" aria-label="Where a church might use them">
+        <li>members</li><li>Sunday school</li><li>shut-ins</li><li>Christmas Eve services</li><li>stocking stuffers</li>
+      </ul>
+    </section>
+
+    <section class="board" aria-labelledby="b-six">
+      <header>
+        <p class="label">Board · The collection</p>
+        <h2 id="b-six">Six prayers, one at a time</h2>
+        <p class="intro">Each prayer is its own set. The Lord's Prayer leads and can launch alone. Ken, Ann and Thunder choose the other five together.</p>
+      </header>
+      <div class="six">
+        <div class="slot">
+          <div class="card filled"><svg viewBox="0 0 47.625 152.4" aria-hidden="true"><use href="#art-prayer-card"/></svg></div>
+          <small><b>The Lord's Prayer</b><br>Matthew 6:9–13</small>
+        </div>
+        <div class="slot"><div class="card empty">2</div><small>to choose</small></div>
+        <div class="slot"><div class="card empty">3</div><small>to choose</small></div>
+        <div class="slot"><div class="card empty">4</div><small>to choose</small></div>
+        <div class="slot"><div class="card empty">5</div><small>to choose</small></div>
+        <div class="slot"><div class="card empty">6</div><small>to choose</small></div>
+      </div>
+    </section>
+
+    <section class="board" aria-labelledby="b-look">
+      <header>
+        <p class="label">Board · Look and feel</p>
+        <h2 id="b-look">Paper, kraft and a laser's burn</h2>
+        <p class="intro">Nothing printed: every mark is burned in by the laser in Texas. Plain, warm, handmade.</p>
+      </header>
+      <div class="materials">
+        <div class="chip"><i style="background:#fbfbf8"></i><b>Cardstock</b><span>prayer and thank-you cards</span></div>
+        <div class="chip"><i style="background:#4a2d1b"></i><b>Laser burn</b><span>all text and pictures</span></div>
+        <div class="chip"><i class="seedpaper"></i><b>Seed paper</b><span>wildflower swatch</span></div>
+        <div class="chip"><i style="background:#b98b5c"></i><b>Kraft</b><span>#6 3/4 envelope</span></div>
+        <div class="chip"><i style="background:#3d6a2c"></i><b>Sprout green</b><span>web accent only</span></div>
+      </div>
+      <div class="specimens">
+        <div class="specimen">
+          <span class="label">Fipty Serif · the prayer</span>
+          <svg viewBox="2 2.5 43.6 13.5" aria-label="The Lord's Prayer title in Fipty Serif"><use href="#art-prayer-card" x="0" y="0" width="47.625" height="152.4"/></svg>
+        </div>
+        <div class="specimen">
+          <span class="label">Gores Sans · the captions</span>
+          <svg viewBox="1.5 98 39.5 27" aria-label="Step 3 caption, water and pray daily, in Gores Sans"><use href="#art-thank-you-back" x="0" y="0" width="82.55" height="127"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="board" aria-labelledby="b-shop">
+      <header>
+        <p class="label">Board · The shop</p>
+        <h2 id="b-shop">Three pages and a church form</h2>
+        <p class="intro">A Shopify store on our own domain (agreed by Ken and Ann; Ann's other notes to follow). Prices are per card, and each card is a complete set.</p>
+      </header>
+      <div class="pages">
+        <div class="page"><h3>Landing</h3><p>The set and a sprouted pot, the four steps, the prayers, prices, "Order now" and "Ordering for a church?"</p></div>
+        <div class="page"><h3>About</h3><p>Ken and Ann, the mission in their words, made by hand on a laser in Texas, what to expect when you plant.</p></div>
+        <div class="page"><h3>Cart / Order</h3><p>Pick a prayer and quantity. Churches send a form; a person calls to verify before payment.</p></div>
+      </div>
+      <table class="prices">
+        <thead><tr><th>Order</th><th>Per card</th><th>+ shipping</th><th>Customer pays</th></tr></thead>
+        <tbody>
+          <tr><td>1–9 cards</td><td>$10.00</td><td>$1.25</td><td class="big">$11.25</td></tr>
+          <tr><td>10 or more</td><td>$8.50</td><td>$1.25</td><td class="big">$9.75</td></tr>
+          <tr><td>Church</td><td>$7.50</td><td>$1.25</td><td class="big">$8.75</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="board wide" aria-labelledby="b-road">
+      <header>
+        <p class="label">Board · The road to Christmas</p>
+        <h2 id="b-road">Seven weeks, test to Christmas Day</h2>
+        <p class="intro">Proposed dates from the blueprint, drawn to scale. The last day to order for Christmas follows USPS's 2026 holiday mailing dates.</p>
+      </header>
+      <div class="gantt"><div class="gantt-inner"><div class="chart" id="chart"></div></div></div>
+      <p class="legend">Bars are working days; diamonds are deadlines. Dashed lines: today, Thanksgiving and Christmas.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Vision boards for the bus1idea blueprint (v2). Built from <span class="mono">blueprint.md</span> and the laser files in <span class="mono">designs/laser-test/</span>.</p>
+    <p>Rebuild: <span class="mono">node scripts\build-vision.js</span> · 2026-11-03</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  // church kits: 12 kits of 8, then 4 spare
+  var kits = document.getElementById('kits');
+  var html = '';
+  for (var k = 0; k < 12; k++) {
+    html += '<div class="kit">';
+    for (var s = 0; s < 8; s++) html += '<span></span>';
+    html += '</div>';
+  }
+  html += '<div class="spare"><span></span><span></span><span></span><span></span></div>';
+  kits.innerHTML = html;
+
+  // road to Christmas: scale runs Nov 1 to Dec 31, 2026
+  var start = Date.UTC(2026, 10, 1), end = Date.UTC(2026, 11, 31);
+  function pos(m, d) { return ((Date.UTC(2026, m - 1, d) - start) / (end - start) * 100); }
+  var rows = [
+    ['Laser tests', 'Nov 3–4', [11, 3], [11, 4]],
+    ['Order and receive supplies', 'Nov 4–5', [11, 4], [11, 5]],
+    ['Make the 100 sample sets', 'Nov 5–11', [11, 5], [11, 11]],
+    ['Deliver to about 12 churches', 'Nov 12–20', [11, 12], [11, 20]],
+    ['Website live', 'by Nov 20', [11, 20], null],
+    ['Take orders, make and post', 'Nov 20 – mid Dec', [11, 20], [12, 15]],
+    ['Last day to order for Christmas', 'mid Dec (USPS)', [12, 15], null]
+  ];
+  var out = '<div class="markers" style="left:202px">';
+  [['Today', 11, 3], ['Thanksgiving', 11, 26], ['Christmas', 12, 25]].forEach(function (m) {
+    out += '<div class="marker" style="left:' + pos(m[1], m[2]).toFixed(2) + '%"><b>' + m[0] + '</b></div>';
+  });
+  out += '</div>';
+  rows.forEach(function (r) {
+    var a = pos(r[2][0], r[2][1]);
+    var bar = r[3]
+      ? '<i class="bar" style="left:' + a.toFixed(2) + '%;width:' + (pos(r[3][0], r[3][1] + 1) - a).toFixed(2) + '%"></i>'
+      : '<i class="bar milestone" style="left:' + a.toFixed(2) + '%"></i>';
+    out += '<div class="g-row"><div class="name">' + r[0] + '<span>' + r[1] + '</span></div><div class="track">' + bar + '</div></div>';
+  });
+  var ticks = '';
+  [[11, 1, 'Nov 1'], [11, 15, 'Nov 15'], [12, 1, 'Dec 1'], [12, 15, 'Dec 15'], [12, 31, 'Dec 31']].forEach(function (t) {
+    ticks += '<span style="left:' + pos(t[0], t[1]).toFixed(2) + '%">' + t[2] + '</span>';
+  });
+  out += '<div class="g-row"><div></div><div class="axis">' + ticks + '</div></div>';
+  var chart = document.getElementById('chart');
+  chart.innerHTML = out;
+})();
+</script>

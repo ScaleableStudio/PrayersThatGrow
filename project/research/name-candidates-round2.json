@@ -1,0 +1,13 @@
+{
+  "_about": "Round 2 (2026-11-04): variants of strong names that were taken as .com, and .org/.net for the best available picks. Run: check-names.ps1 -Candidates research\\name-candidates-round2.json -Out research\\name-availability-round2.csv",
+  "tlds": ["com", "org", "net"],
+  "names": [
+    { "name": "theprayerseed",     "why": "prayerseed.com is taken; 'the' version" },
+    { "name": "prayerseedcards",   "why": "prayerseed + what it is" },
+    { "name": "plantaprayercards", "why": "plantaprayer.com is taken; adds the product" },
+    { "name": "sowandpray",        "why": "Top available .com pick; check .org/.net too" },
+    { "name": "waterandpray",      "why": "Top available .com pick; check .org/.net too" },
+    { "name": "prayersthatgrow",   "why": "Top available .com pick; check .org/.net too" },
+    { "name": "sowaprayer",        "why": "Available .com; check .org/.net too" }
+  ]
+}

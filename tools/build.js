@@ -96,6 +96,9 @@ const site = path.join(root, 'site');
 fs.mkdirSync(site, { recursive: true });
 for (const e of fs.readdirSync(site)) fs.rmSync(path.join(site, e), { recursive: true, force: true });
 copyDir(path.join(root, 'assets'), path.join(site, 'assets'));
+// GitHub Pages reads the custom domain from site/CNAME. Harmless until Pages is switched on (see docs/domain-connection.md).
+fs.writeFileSync(path.join(site, 'CNAME'), cfg.deploy.domain + '\n', 'utf8');
+fs.writeFileSync(path.join(site, '.nojekyll'), '', 'utf8');
 for (const f of fs.readdirSync(path.join(root, 'src', 'pages')).filter(f => f.endsWith('.html'))) {
   fs.writeFileSync(path.join(site, f), render(path.join(root, 'src', 'pages', f), ''), 'utf8');
   console.log('site/' + f);

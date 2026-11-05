@@ -44,6 +44,18 @@
     "open": false,
     "_note": "false = buttons say orders open soon and the cart is not built into the site. The cart draft lives in src/drafts/."
   },
+  "deploy": {
+    "domain": "prayersthatgrow.com",
+    "wwwRedirect": true,
+    "host": "GitHub Pages (planned; see docs/domain-connection.md)",
+    "live": false,
+    "_note": "live stays false until Ken says go. The build writes site/CNAME from 'domain'; the Pages workflow runs only when started by hand."
+  },
+  "project": {
+    "source": "../../bus1idea",
+    "target": "project",
+    "_note": "tools/sync-project.js mirrors Scriptorium's Projects/bus1idea here. Scriptorium stays the working copy; re-run the sync after changes there."
+  },
   "art": {
     "laserDir": "../../bus1idea/designs/laser-test",
     "logo": "../../bus1idea/designs/logo/sprouting-seed.svg",
